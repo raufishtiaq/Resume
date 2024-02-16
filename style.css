@@ -46,6 +46,6 @@ h3 {
 
     .contact-info , .about-p, .experience-p, .education-p, .awards-p, .project-p, .skill-p, .language-p, .hobbies-p, .ref-p, .lead-p{
         width: 100%;
-        text-align: justify;
+/*         text-align: justify; */
     }
 }
