@@ -4,7 +4,7 @@
     font-family: calibri;
 }
 .contact-sec , .about-sec , .experience-sec, .education-sec , .awards-sec, .project-sec, .skill-sec, .language-sec, .hobbies-sec, .ref-sec, .lead-sec{
-    padding: 20px;
+    padding: 20px 20px 0px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -38,14 +38,12 @@ h3 {
     color: rgb(17, 71, 147);
   }
 
+  /* Media Query for Responsiveness  */
 @media (max-width: 768px) {
-    /* Adjust layout for smaller screens */
     .img-sec, .about-h, .experience-h, .education-h, .awards-h, .project-h, .skill-h, .language-h, .hobbies-h, .ref-h, .lead-h {
         width: 100%;
     }
-
     .contact-info , .about-p, .experience-p, .education-p, .awards-p, .project-p, .skill-p, .language-p, .hobbies-p, .ref-p, .lead-p{
         width: 100%;
-/*         text-align: justify; */
     }
 }
