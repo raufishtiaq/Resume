@@ -1,19 +1,25 @@
 * {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     font-family: calibri;
 }
+
+/* CSS Styling for Complete Sections */
 .contact-sec , .about-sec , .experience-sec, .education-sec , .awards-sec, .project-sec, .skill-sec, .language-sec, .hobbies-sec, .ref-sec, .lead-sec{
     padding: 20px 20px 0px;
     display: flex;
     flex-wrap: wrap;
 }
+
+/* CSS Styling for Headings */
 .img-sec , .about-h, .experience-h, .education-h, .awards-h, .project-h, .skill-h, .language-h, .hobbies-h, .ref-h, .lead-h{
     width: 20%;
     display: inline-block;
     flex: 0 0 auto;
     text-align: center;
 }
+
+/* CSS Styling for Content */
 .contact-info, .about-p, .experience-p, .education-p, .awards-p, .project-p, .skill-p, .language-p, .hobbies-p, .ref-p, .lead-p{
     width: 80%;
     display: inline-block;
@@ -37,7 +43,7 @@ a{
 h3 {
     color: rgb(17, 71, 147);
   }
-
+  
   /* Media Query for Responsiveness  */
 @media (max-width: 768px) {
     .img-sec, .about-h, .experience-h, .education-h, .awards-h, .project-h, .skill-h, .language-h, .hobbies-h, .ref-h, .lead-h {
