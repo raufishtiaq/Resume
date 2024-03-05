@@ -21,7 +21,7 @@ const requestNotificationPermission = async () => {
     if  (permission !== 'granted') {
         throw new Error("Notification Permission Not Granted");
     } else {
-        new Notification("Hello World");
+        new Notification("Welcome to My Resume");
     }
 }
 
