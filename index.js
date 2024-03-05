@@ -29,5 +29,6 @@ const requestNotificationPermission = async () => {
 
 
 checkPermission()
-registerSW()
 requestNotificationPermission()
+registerSW()
+     
