@@ -3,6 +3,11 @@ const checkPermission = () => {
         throw new Error("No support for service worker");
     }
 
+    if ( !('Notification' in window)) {
+        throw new Error("No support for Notification API");
+    }
+
+
 }
 
 const registerSW = async () => {
@@ -10,5 +15,19 @@ const registerSW = async () => {
     return registration;
 }
 
+const requestNotificationPermission = async () => {
+    const permission = await Notification.requestPermission();
+
+    if  (permission !== 'granted') {
+        throw new Error("Notification Permission Not Granted");
+    } else {
+        new Notification("Hello World");
+    }
+}
+
+
+
+
 checkPermission()
 registerSW()
+requestNotificationPermission()
