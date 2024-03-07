@@ -25,6 +25,19 @@ const requestNotificationPermission = async () => {
     }
 }
 
+// Function to send notification
+const sendNotification = (message) =>(
+    new Notification(message));
+
+// Event listener for online event
+window.addEventListener('online', () => {
+    sendNotification('You are now online.');
+});
+
+// Event listener for offline event
+window.addEventListener('offline', () =>{
+    sendNotification('You are now offline.');
+});
 
 
 
