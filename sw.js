@@ -86,5 +86,12 @@ const handleOfflineEvent = () => {
     sendNotification('You are now offline.');
 }
 
-self.addEventListener('online', handleOnlineEvent);
-self.addEventListener('offline', handleOfflineEvent);
+// Event listener for online event
+self.addEventListener('online', () => {
+    handleOnlineEvent(); // Call the function here
+})
+
+// Event listener for offline event
+self.addEventListener('offline', () => {
+    handleOfflineEvent(); // Call the function here
+});
