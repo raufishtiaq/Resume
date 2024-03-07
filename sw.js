@@ -1,16 +1,21 @@
 console.log("This message is from the service worker");
 
+
 const CACHE_NAME = 'my-cache-v1';
 const CACHE_URLS = [
     '/',
     '/index.html', 
-    '/styles.css' 
+    '/style.css' 
 ];
 
 const cacheAssets = async () => {
     const cache = await caches.open(CACHE_NAME);
-    await cache.addAll(CACHE_URLS);
-}
+    try {
+        await Promise.all(CACHE_URLS.map(url => fetch(url)));
+    } catch (error) {
+        console.error('Failed to cache one or more assets:', error);
+    }
+};
 
 const fetchAndCache = async (request) => {
     try {
