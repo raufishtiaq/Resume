@@ -67,3 +67,24 @@ self.addEventListener('push', event => {
 
     event.waitUntil(self.registration.showNotification(data.title, options));
 });
+
+
+// Function to send notification
+const sendNotification = (message) => {
+    self.registration.showNotification('Network Status', {
+        body: message,
+    });
+}
+
+// Event listener for online event
+const handleOnlineEvent = () => {
+    sendNotification('You are now online.');
+}
+
+// Event listener for offline event
+const handleOfflineEvent = () => {
+    sendNotification('You are now offline.');
+}
+
+self.addEventListener('online', handleOnlineEvent);
+self.addEventListener('offline', handleOfflineEvent);
